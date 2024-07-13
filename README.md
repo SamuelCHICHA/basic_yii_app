@@ -19,3 +19,5 @@ If you want to work on a new feature or fix a bug you can create a new dedicated
 2. Make your modifications
 3. If you want to go back to another branch without commiting you work. You can stash it `git stash` and unstash it if you want to get it back `git stash apply`.
 4. If you want to commit (and perhaps push) you can do so by using the `git commit` command and then do `git push --set-upstream origin branch_name`. From there you will be able to create a pull request if it is not already set up.
+5. Once merged you may delete the remote branch and the local branch.
+6. Pull on main and you can start over. :)
