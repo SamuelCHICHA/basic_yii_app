@@ -1,13 +1,29 @@
 # Yii basic app
 
+This project aims to show how you can separate your environments. 
+To do that, we used a [yii](https://www.yiiframework.com/) application.
+
+
 ## How to install
 
 1. Add config to the docker-compose.yml file
 
+Let's say we want to have a new environment. You can add it by adding this configuration to the docker-compose.yml file in the `services` configuration.
+
+```
+services:
+    service_name:
+        build: path_to_dockerfile
+        volumes:
+        - path_to_directory:/app:rw
+        ports:
+        - unused_port:8080
+```
+
 2. Run these commands
 
-> 1. `git clone https://github.com/1000x-Developers/basic_yii_app directory_name`
-> 2. `cd directory_name`
+> 1. `git clone https://github.com/1000x-Developers/basic_yii_app path_to_directory`
+> 2. `cd path_to_directory`
 > 3. `docker compose run service_name composer install`
 > 4. `docker compose up service_name -d`
 
